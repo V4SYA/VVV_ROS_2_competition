@@ -58,20 +58,7 @@ class DetectLane(Node):
 		self.is_center_x_exist = msg.data
 
         
-	def cbFindLane(self, image_msg):
-		self.hue_white_l = self.get_parameter("white/hue_l").get_parameter_value().integer_value
-		self.hue_white_h = self.get_parameter("white/hue_h").get_parameter_value().integer_value
-		self.saturation_white_l = self.get_parameter("white/saturation_l").get_parameter_value().integer_value
-		self.saturation_white_h = self.get_parameter("white/saturation_h").get_parameter_value().integer_value
-		self.lightness_white_l = self.get_parameter("white/lightness_l").get_parameter_value().integer_value
-		self.lightness_white_h = self.get_parameter("white/lightness_h").get_parameter_value().integer_value
-		self.hue_yellow_l = self.get_parameter("yellow/hue_l").get_parameter_value().integer_value
-		self.hue_yellow_h = self.get_parameter("yellow/hue_h").get_parameter_value().integer_value
-		self.saturation_yellow_l = self.get_parameter("yellow/saturation_l").get_parameter_value().integer_value
-		self.saturation_yellow_h = self.get_parameter("yellow/saturation_h").get_parameter_value().integer_value
-		self.lightness_yellow_l = self.get_parameter("yellow/lightness_l").get_parameter_value().integer_value
-		self.lightness_yellow_h = self.get_parameter("yellow/lightness_h").get_parameter_value().integer_value
-		
+	def cbFindLane(self, image_msg):		
 		cv_image = self.br.imgmsg_to_cv2(image_msg, "bgr8")
 		self.window_width = cv_image.shape[1]
 		self.window_height = cv_image.shape[0]
