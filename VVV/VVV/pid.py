@@ -29,10 +29,10 @@ class Controller(Node):
 		self.declare_parameters(
             namespace='',
             parameters=[
-			('Kp', 1.0),
+			('Kp', 0.6),
 			('Ki', 0.01),
 			('Kd', 0.01),
-			('desiredV', 0.01),
+			('desiredV', 0.15),
         ])
 		self.publisher_ = self.create_publisher(Twist, '/cmd_vel', 10)
 		self.subscription = self.create_subscription(Float64, '/detect/lane', self.iteratePID, 10)
