@@ -28,16 +28,16 @@ class DetectLane(Node):
             namespace='',
             parameters=[
             ('white/hue_l', 0),
-            ('white/hue_h', 179),
+            ('white/hue_h', 255),
             ('white/saturation_l', 0),
-            ('white/saturation_h', 70),
-            ('white/lightness_l', 105),
+            ('white/saturation_h', 10),
+            ('white/lightness_l', 252),
 			('white/lightness_h', 255),
-			('yellow/hue_l', 10),
-			('yellow/hue_h', 127),
-			('yellow/saturation_l', 70),
+			('yellow/hue_l', 20),
+			('yellow/hue_h', 30),
+			('yellow/saturation_l', 260),
 			('yellow/saturation_h', 255),
-			('yellow/lightness_l', 95),
+			('yellow/lightness_l', 250),
 			('yellow/lightness_h', 255),
         ])
 
