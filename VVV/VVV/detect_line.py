@@ -35,7 +35,7 @@ class DetectLane(Node):
 			('white/lightness_h', 255),
 			('yellow/hue_l', 20),
 			('yellow/hue_h', 30),
-			('yellow/saturation_l', 260),
+			('yellow/saturation_l', 250),
 			('yellow/saturation_h', 255),
 			('yellow/lightness_l', 250),
 			('yellow/lightness_h', 255),
