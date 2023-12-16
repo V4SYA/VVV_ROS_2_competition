@@ -23,20 +23,14 @@ def generate_launch_description():
    return LaunchDescription([
       Node(
          package='VVV',
-         executable='path_tracking',
+         executable='detect_line',
          namespace='detect',
          name='lane',
          parameters=[config]
       ),
       Node(
          package='VVV',
-         executable='take_picture',
-         namespace='drive',
-         name='yolo'
-      ),
-      Node(
-         package='VVV',
-         executable='pid_controller',
+         executable='pid',
          namespace='drive',
          name='pid',
          parameters=[pid_config]
