@@ -44,12 +44,7 @@ class Controller(Node):
 		self.old_e = 0  # Previous error
 
 		
-	def iteratePID(self, msg):
-		self.Kp = self.get_parameter("Kp").get_parameter_value().double_value
-		self.Ki = self.get_parameter("Ki").get_parameter_value().double_value
-		self.Kd = self.get_parameter("Kd").get_parameter_value().double_value
-		self.desiredV = self.get_parameter("desiredV").get_parameter_value().double_value
-		
+	def iteratePID(self, msg):		
 		e = (390 - msg.data)/100
 		# self.get_logger().info('Message data: %lf' % msg.data)
 		# self.get_logger().info('Error: %lf' % e)
