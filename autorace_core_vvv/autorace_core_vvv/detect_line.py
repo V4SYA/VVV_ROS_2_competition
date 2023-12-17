@@ -24,29 +24,27 @@ class DetectLane(Node):
 
 	def __init__(self):
 		super().__init__('pid')
-		self.declare_parameters(
-            namespace='',
-            parameters=[
-            ('white/hue_l', 0),
-            ('white/hue_h', 255),
-            ('white/saturation_l', 0),
-            ('white/saturation_h', 10),
-            ('white/lightness_l', 252),
-			('white/lightness_h', 255),
-			('yellow/hue_l', 20),
-			('yellow/hue_h', 30),
-			('yellow/saturation_l', 250),
-			('yellow/saturation_h', 255),
-			('yellow/lightness_l', 250),
-			('yellow/lightness_h', 255),
-        ])
-
-		self.publisher_ = self.create_publisher(Float64, '/detect/lane', 10)
+		
+		self.namespace=''
+		
+		self.hue_white_l = 0
+		self.hue_white_h = 255
+		self.saturation_white_l = 0
+		self.saturation_white_h = 10
+		self.lightness_white_l = 252
+		self.lightness_white_h = 255
+		self.hue_yellow_l = 20
+		self.hue_yellow_h = 30
+		self.saturation_yellow_l = 260
+		self.saturation_yellow_h = 255
+		self.lightness_yellow_l = 250
+		self.lightness_yellow_h = 255		
+		
 		self.subscription = self.create_subscription(Image, '/color/image_projected_compensated', self.cbFindLane, 1)
 		self.comands = self.create_subscription(Bool, '/start', self.start, 1)
 		self.br = CvBridge()
 		self.is_calibration_mode = True
-		self.is_center_x_exist = False
+		self.is_center_x_exist = True
 		self.counter = 1
 
 		self.reliability_white_line = 100
