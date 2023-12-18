@@ -20,16 +20,16 @@ setup(
     install_requires=['setuptools',
                       'ultralytics',],
     zip_safe=True,
-    maintainer='Vasta',
+    maintainer='Vasya',
     maintainer_email='v.postnykh@g.nsu.ru',
     description='TODO: Package description',
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'path_tracking=autorace_core_rossiane.path_tracking:main',
-            'take_picture=autorace_core_rossiane.take_picture:main',
-            'pid_controller=autorace_core_rossiane.pid_controller:main'
+            'path_tracking=autorace_core_vvv.path_tracking:main',
+            'take_picture=autorace_core_vvv.take_picture:main',
+            'pid_controller=autorace_core_vvv.pid_controller:main'
         ],
     },
 )
