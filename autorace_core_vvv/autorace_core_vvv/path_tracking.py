@@ -33,13 +33,13 @@ class DetectLane(Node):
             ('white/saturation_l', 0),
             ('white/saturation_h', 70),
             ('white/lightness_l', 105),
-			('white/lightness_h', 255),
-			('yellow/hue_l', 10),
-			('yellow/hue_h', 127),
-			('yellow/saturation_l', 70),
-			('yellow/saturation_h', 255),
-			('yellow/lightness_l', 95),
-			('yellow/lightness_h', 255),
+            ('white/lightness_h', 255),
+            ('yellow/hue_l', 10),
+            ('yellow/hue_h', 127),
+            ('yellow/saturation_l', 70),
+            ('yellow/saturation_h', 255),
+            ('yellow/lightness_l', 95),
+            ('yellow/lightness_h', 255),
         ])
 
 		self.publisher_ = self.create_publisher(Float64, '/detect/lane', 10)
