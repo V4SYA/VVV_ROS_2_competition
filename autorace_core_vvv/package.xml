@@ -3,10 +3,14 @@
 <package format="3">
   <name>autorace_core_vvv</name>
   <version>0.0.0</version>
-  <description>Contains launch files for our package</description>
-  <maintainer email="vasya@g.nsu.ru">Vasya</maintainer>
-  <license>Apache 2.0</license>
+  <description>Apache 2.0</description>
+  <maintainer email="v.postnykh@g.nsu.ru">Vasya</maintainer>
+  <license>TODO: License declaration</license>
 
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>
