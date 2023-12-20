@@ -37,7 +37,7 @@ def generate_launch_description():
    
    yolo = Node(
          package='autorace_core_exhausted_by_ros',
-         executable='detect_sign',
+         executable='detect_signs',
          namespace='drive',
          name='yolo'
       )
