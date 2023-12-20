@@ -155,16 +155,8 @@ class DetectLane(Node):
 
 		how_much_short = self.window_height - how_much_short
 
-		# if how_much_short > 100:
-		# 	if self.reliability_white_line >= 5:
-		# 		self.reliability_white_line -= 5
-		# elif how_much_short <= 100:
-		# 	if self.reliability_white_line <= 99:
-		# 		self.reliability_white_line += 5
-
 		msg_white_line_reliability = UInt8()
 		msg_white_line_reliability.data = self.reliability_white_line
-		#self.pub_white_line_reliability.publish(msg_white_line_reliability)
 
 		return fraction_num, mask
 	
@@ -206,16 +198,8 @@ class DetectLane(Node):
 
 		how_much_short = self.window_height - how_much_short
 
-		# if how_much_short > 100:
-		# 	if self.reliability_yellow_line >= 5:
-		# 		self.reliability_yellow_line -= 5
-		# elif how_much_short <= 100:
-		# 	if self.reliability_yellow_line <= 99:
-		# 		self.reliability_yellow_line += 5
-
 		msg_yellow_line_reliability = UInt8()
 		msg_yellow_line_reliability.data = self.reliability_yellow_line
-		#self.pub_yellow_line_reliability.publish(msg_yellow_line_reliability)                       !!!
 		return fraction_num, mask
 	
 	def fit_from_lines(self, lane_fit, image):
@@ -383,10 +367,7 @@ class DetectLane(Node):
 			cv2.polylines(color_warp_lines, np.int_([pts_center]), isClosed=False, color=(0, 255, 255), thickness=15)
 
 		# Combine the result with the original image
-		#final = cv2.addWeighted(cv_image, 1, color_warp, 0.2, 0)
 		final = cv2.addWeighted(cv_image, 1, color_warp_lines, 1, 0)
-		# cv2.imshow('camera', final)
-		# cv2.waitKey(1)
 		if self.flags["green_light"] == True:
 			# publishes lane center
 			msg_desired_center = Float64()
