@@ -81,7 +81,6 @@ class PublisherSubscriber(Node):
 			value = c.boxes.cls.item()
 			box_coordinates = c.boxes.xyxy[0].cpu().numpy()
 			width = box_coordinates[2] - box_coordinates[0]
-			#self.get_logger().info(f"Here width {self.names[int(value)]}: {width}")
 			centre = (box_coordinates[2] + box_coordinates[0])/2
 			if width > self.wigths[self.names[int(value)]]: self.commands[self.names[int(value)]](centre)
 
