@@ -2,6 +2,9 @@
 
 У нас совсем не горят сроки))
 
+## Дополнительно для работы проекта
+pip install ultralytics
+
 ## Сборка
 colcon build --packages-select autorace_core_exhausted_by_ros autorace_camera
 
